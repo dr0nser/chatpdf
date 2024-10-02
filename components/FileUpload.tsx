@@ -19,7 +19,7 @@ const FileUpload = (props: Props) => {
       return res.data;
     },
     onSuccess: (data) => {
-      toast.success(data.message);
+      // toast.success(data.message);
     },
     onError: () => {
       toast.error("Error creating chat");
