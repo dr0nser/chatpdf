@@ -1,11 +1,10 @@
-import { Pinecone, PineconeRecord, RecordMetadata } from "@pinecone-database/pinecone";
 import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
-import { downloadFileFromS3 } from "./s3-server";
 import { Document, RecursiveCharacterTextSplitter } from "@pinecone-database/doc-splitter";
-import { getEmbeddings } from "../embeddings";
-import md5 from "md5";
+import { Pinecone, PineconeRecord, RecordMetadata } from "@pinecone-database/pinecone";
 import { Vector } from "@pinecone-database/pinecone/dist/pinecone-generated-ts-fetch/data";
-import { convertStringToAscii } from "../utils";
+import md5 from "md5";
+import { getEmbeddings } from "../embeddings";
+import { downloadFileFromS3 } from "./s3-server";
 
 type PDFPage = {
   pageContent: string;
@@ -37,8 +36,6 @@ export async function loadFileFromS3IntoPinecone(fileKey: string) {
 
   //* 4. Upload vectors to pinecone
   const pineconeIndex = pinecone.Index("chatpdf");
-
-  console.log("inserting vectors into pinecone");
   await pineconeIndex.namespace("chatpdf").upsert(vectors as PineconeRecord<RecordMetadata>[]);
 
   return docs[0];
