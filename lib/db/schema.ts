@@ -11,6 +11,8 @@ export const chats = pgTable("chats", {
   createdAt: timestamp("created_at").notNull().defaultNow(),
 });
 
+export type DrizzleChat = typeof chats.$inferSelect;
+
 export const messages = pgTable("messages", {
   id: serial("id").primaryKey(),
   chatId: integer("chat_id")

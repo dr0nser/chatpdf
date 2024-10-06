@@ -21,7 +21,6 @@ const FileUpload = (props: Props) => {
       return res.data;
     },
     onSuccess: ({ chatId }) => {
-      console.log("blaaaaaaaaaaaaaaaaaaaaaa");
       toast.success("Chat created");
       router.push(`/chat/${chatId}`);
     },

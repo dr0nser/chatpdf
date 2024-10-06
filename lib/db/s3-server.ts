@@ -6,7 +6,7 @@ import { s3Client } from "./s3";
 export async function downloadFileFromS3(fileKey: string): Promise<string | null> {
   const command = new GetObjectCommand({
     Bucket: process.env.NEXT_PUBLIC_AWS_S3_BUCKET_NAME!,
-    Key: fileKey,
+    Key: "uploads/" + fileKey,
   });
   try {
     const response = await s3Client.send(command);

@@ -9,10 +9,10 @@ export const s3Client = new S3({
 });
 
 export async function uploadPDFToS3(file: File) {
-  const fileKey = "uploads/" + Date.now().toString() + file.name.replace(/\s+/g, "-");
+  const fileKey = Date.now().toString() + file.name.replace(/\s+/g, "-");
   const params = {
     Bucket: process.env.NEXT_PUBLIC_AWS_S3_BUCKET_NAME!,
-    Key: fileKey,
+    Key: "uploads/" + fileKey,
     Body: file,
   };
   const uploadFileToS3 = (file: any): Promise<{ fileKey: string; fileName: string }> =>
