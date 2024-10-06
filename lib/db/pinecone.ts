@@ -5,6 +5,7 @@ import { Vector } from "@pinecone-database/pinecone/dist/pinecone-generated-ts-f
 import md5 from "md5";
 import { getEmbeddings } from "../embeddings";
 import { downloadFileFromS3 } from "./s3-server";
+import { convertToAscii } from "../utils";
 
 type PDFPage = {
   pageContent: string;
@@ -36,7 +37,9 @@ export async function loadFileFromS3IntoPinecone(fileKey: string) {
 
   //* 4. Upload vectors to pinecone
   const pineconeIndex = pinecone.Index("chatpdf");
-  await pineconeIndex.namespace("chatpdf").upsert(vectors as PineconeRecord<RecordMetadata>[]);
+  await pineconeIndex
+    .namespace(convertToAscii(fileKey))
+    .upsert(vectors as PineconeRecord<RecordMetadata>[]);
 
   return docs[0];
 }
