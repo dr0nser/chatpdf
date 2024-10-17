@@ -5,7 +5,7 @@ import { chats } from "@/lib/db/schema";
 import { auth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
   const { userId } = auth();
   if (!userId) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   try {
@@ -23,7 +23,7 @@ export async function POST(req: Request, res: Response) {
       .returning({
         insertedId: chats.id,
       });
-    return NextResponse.json({ chatId: chatId[0].insertedId }, { status: 200 });
+    return NextResponse.json({ chatId: chatId[0].insertedId }, { status: 201 });
   } catch (error) {
     console.error(error);
     return NextResponse.json(
