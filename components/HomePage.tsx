@@ -53,7 +53,7 @@ export function HomePage() {
     const chatCountResponse = await axios.get("/api/chat-count");
     const chatCountData = await chatCountResponse.data;
     const chatCount = chatCountData.chats;
-    return chatCount && chatCount < 2;
+    return chatCount && chatCount < 5;
   };
 
   const handleFileUpload = async (files: File[]) => {
@@ -66,7 +66,7 @@ export function HomePage() {
         setFiles(files);
         const uploadedFile = files[0];
         if (uploadedFile.size > 10 * 1024 * 1024) {
-          toast.error("File too large");
+          toast.error("Maximum 10MB file is allowed");
           return;
         }
         const uploadedFileData = await toast.promise(uploadPDFToS3(uploadedFile), {

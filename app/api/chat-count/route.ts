@@ -1,7 +1,7 @@
 import { db } from "@/lib/db";
 import { chats } from "@/lib/db/schema";
 import { auth } from "@clerk/nextjs/server";
-import { eq } from "drizzle-orm";
+import { desc, eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -9,6 +9,7 @@ export async function GET() {
   const _chats = await db
     .select()
     .from(chats)
+    .orderBy(desc(chats.createdAt))
     .where(eq(chats.userId, userId as string));
 
   if (_chats.length === 0) return NextResponse.json({ chats: _chats.length });

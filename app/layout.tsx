@@ -30,6 +30,9 @@ export default function RootLayout({
     <ClerkProvider>
       <Providers>
         <html lang="en">
+          <head>
+            <link rel="icon" href="/logo.png" type="image/png" sizes="any" />
+          </head>
           <body className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}>
             {children}
             <Toaster toastOptions={{ duration: 3000, position: "bottom-center" }} />
