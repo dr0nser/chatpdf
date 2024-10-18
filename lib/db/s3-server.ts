@@ -13,7 +13,7 @@ export async function downloadFileFromS3(fileKey: string): Promise<string | null
     if (!response.Body) {
       throw new Error("No content in response body");
     }
-    const fileName = process.cwd() + `/pdf-${Date.now()}.pdf`;
+    const fileName = process.cwd() + `/tmp/pdf-${Date.now()}.pdf`;
     const arr = await response.Body.transformToByteArray();
     fs.writeFileSync(fileName, arr as Buffer);
     return fileName;
