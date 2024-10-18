@@ -58,7 +58,6 @@ export function HomePage() {
 
   const handleFileUpload = async (files: File[]) => {
     const canUploadFile = await canUploadMoreFiles();
-    console.log(canUploadFile);
     if (!canUploadFile) {
       toast.error("Sorry! We are processing limited files at the moment");
       return;
