@@ -1,7 +1,6 @@
 "use client";
 import { uploadPDFToS3 } from "@/lib/db/s3";
 import { UserButton, useUser } from "@clerk/nextjs";
-import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { motion } from "framer-motion";
 import { ChevronRightIcon, LogIn } from "lucide-react";
@@ -15,7 +14,7 @@ import { HeroHighlight, Highlight } from "./aceternity/hero-highlight";
 export function HomePage() {
   const router = useRouter();
   const { isSignedIn } = useUser();
-  const [_files, setFiles] = useState<File[]>([]);
+  const [, setFiles] = useState<File[]>([]);
 
   const createChat = async ({
     fileKey,

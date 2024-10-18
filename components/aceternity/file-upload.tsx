@@ -45,6 +45,7 @@ export const FileUpload = ({ onChange }: { onChange?: (files: File[]) => void })
     onDrop: handleFileChange,
     onDropRejected: (error) => {
       toast.error("Unable to upload file");
+      console.error({ message: "Unable to upload file", error });
     },
     accept: {
       "application/pdf": [".pdf"],
