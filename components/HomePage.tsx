@@ -52,11 +52,13 @@ export function HomePage() {
     const chatCountResponse = await axios.get("/api/chat-count");
     const chatCountData = await chatCountResponse.data;
     const chatCount = chatCountData.chats;
-    return chatCount && chatCount < 5;
+    if (chatCount === null || chatCount === undefined) return false;
+    return chatCount < 5;
   };
 
   const handleFileUpload = async (files: File[]) => {
     const canUploadFile = await canUploadMoreFiles();
+    console.log(canUploadFile);
     if (!canUploadFile) {
       toast.error("Sorry! We are processing limited files at the moment");
       return;
