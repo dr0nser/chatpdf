@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center" id="title"><a href="https://dr0nser-chatpdf.vercel.app/" target="_blank">ChatPDF</a></h1>
 
-## Getting Started
+<p align="center"><img src="https://socialify.git.ci/dr0nser/chatpdf/image?description=1&amp;descriptionEditable=Seamless%20chats%20with%20PDFs%20&amp;font=Jost&amp;logo=https%3A%2F%2Fdr0nser-chatpdf.s3.ap-south-1.amazonaws.com%2Fgithub-static-assets%2Fdr0nser-chatpdf-logo.svg&amp;name=1&amp;owner=1&amp;pattern=Solid&amp;theme=Dark" alt="project-image"></p>
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<h2>✨ Tech Stack</h2>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<table>
+  <tr>
+    <td align="center" height="150" width="150">
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+        width="40"
+        height="40"
+        alt="Next JS"
+      />
+      <br /><strong>Next JS</strong>
+    </td>
+    <td align="center" height="150" width="150">
+      <img
+        src="https://avatars.githubusercontent.com/u/126733545?v=4"
+        width="40"
+        height="40"
+        alt="Langchain"
+        style="background-color: #ffffff;"
+      />
+      <br /><strong>Langchain</strong>
+    </td>
+    <td align="center" height="150" width="150">
+      <img
+        src="https://dr0nser-chatpdf.s3.ap-south-1.amazonaws.com/github-static-assets/Pinecone-Primary-Logo-White.png"
+        width="40"
+        height="40"
+        alt="Pinecone"
+      />
+      <br /><strong>Pinecone</strong>
+    </td>
+    <td align="center" height="150" width="150">
+      <img
+        src="https://dr0nser-chatpdf.s3.ap-south-1.amazonaws.com/github-static-assets/openai-white-logomark.svg"
+        width="40"
+        height="40"
+        alt="Embedding, GPT Models"
+      />
+      <br /><strong>Embedding, GPT Models</strong>
+    </td>
+    <td align="center" height="150" width="150">
+      <img
+        src="https://ph-files.imgix.net/297bc3d4-bd2e-4eaa-8fb6-a289cf61ea91.png?auto=format"
+        width="40"
+        height="40"
+        alt="TypeScript"
+      />
+      <br /><strong>Clerk</strong>
+    </td>
+    <td align="center" height="150" width="150">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1985px-Postgresql_elephant.svg.png"
+        width="40"
+        height="40"
+        alt="JavaScript"
+      />
+      <br /><strong>PostgreSQL</strong>
+    </td>
+    <td align="center" height="150" width="150">
+      <img
+        src="https://seeklogo.com/images/A/amazon-s3-simple-storage-service-logo-9A3F37976E-seeklogo.com.png"
+        width="40"
+        height="40"
+        alt="TailwindCSS"
+      />
+      <br /><strong>Amazon S3</strong>
+    </td>
+  </tr>
+</table>
