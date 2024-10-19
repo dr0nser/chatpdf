@@ -2,6 +2,10 @@
 
 <p align="center"><img src="https://socialify.git.ci/dr0nser/chatpdf/image?description=1&amp;descriptionEditable=Seamless%20chats%20with%20PDFs%20&amp;font=Jost&amp;logo=https%3A%2F%2Fdr0nser-chatpdf.s3.ap-south-1.amazonaws.com%2Fgithub-static-assets%2Fdr0nser-chatpdf-logo.svg&amp;name=1&amp;owner=1&amp;pattern=Solid&amp;theme=Dark" alt="project-image"></p>
 
+<h2>🚀 Demo</h2>
+
+https://github.com/user-attachments/assets/d03d4b64-c3f2-494c-9a60-842d9792ca92
+
 
 <h2>✨ Tech Stack</h2>
 
